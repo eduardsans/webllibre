@@ -1,0 +1,225 @@
+
+/*
+ Theme Name:   TopLibros
+ Theme URI:
+ Description:  Los mejores libros in da world
+ Author:       Eduard Sans
+ Version:      0.1
+*/
+
+/************************************************************
+ 									* BASIC RULES *
+ **********************************************************/
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+}
+
+.main-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-6 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.center {
+ 	padding: 0;
+	margin: 0;
+ 	text-align: center;
+ }
+
+/************************************************************
+ 									* TOP NAV *
+ **********************************************************/
+
+#top-nav {
+   width: 100%;
+   padding: 15px 15px;
+   position: relative;
+	 background: lightgrey;
+	 box-shadow: 0 2px 6px darkgrey;
+ }
+
+#logo-container {
+  display: inline-block;
+}
+
+#logo {
+  margin: 0 5px 0 0;
+  display: inline;
+}
+
+.eslogan {
+	font-size: .8em;
+}
+
+.user-entry {
+    display: inline-block;
+    float: right;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: 800;
+		margin-top: 5px;
+}
+
+.user-entry ul {
+  margin: 0;
+}
+
+.user-entry ul li, .user-login {
+  display: inline;
+  margin-right: 8px;
+}
+
+.user-entry li a {
+	 padding: 8px 15px;
+	 border-radius: 20px;
+	 box-shadow: 0 1px 3px #7d7d7d;
+}
+
+/************************************************************
+ 									* MAIN NAV *
+ **********************************************************/
+
+
+#main-nav li a {
+	padding: 20px;
+	display: block;
+}
+
+#main-nav li a:hover {
+    background: #797979;
+    color: white;
+		text-shadow: 0 0 3px black;
+}
+
+/************************************************************
+ 									* BASIC ELEMENTS *
+ **********************************************************/
+
+h2.destacado {
+	text-align: center;
+}
+
+li {
+   list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+		text-decoration: none;
+}
+
+/********** Main transitions **********/
+
+a, input[type="submit"], #main-nav li, .libros-destacados div {
+  transition: all .4s ease;
+}
+
+ /************************************************************
+  									* TYPOGRAPHY & COLORS *
+  **********************************************************/
+
+body {
+    font-family: sans-serif, helvetica;
+ }
+
+a, input[type="submit"], footer, #main-menu {
+   background: darkgrey;
+}
+
+a, input[type="submit"], footer, #footer-content {
+	 color: #333;
+}
+
+a:hover, input[type="submit"]:hover {
+    background: #333;
+    color: white;
+}
+
+/************************************************************
+ 											* HOME *
+ **********************************************************/
+
+ .libros-destacados {
+    grid-column-gap: 3%;
+    padding: 20px;
+		overflow: hidden;
+ }
+
+ .caratula-destacados {
+    box-shadow: 0 0 2px lightgrey;
+    border: 1px solid grey;
+}
+
+ .caratula-destacados:hover {
+	transform: scale(1.02);
+	box-shadow: 0 0 18px #adadad;
+}
+
+.titulo-destacados {
+    z-index: -2;
+    position: relative;
+    bottom: 120px;
+    color: #333;
+    display: inline-block;
+    padding: 10px;
+    line-height: 1em;
+    background: rgba(255,255,255,.7);
+}
+
+.libros-destacados div:hover .titulo-destacados {
+    z-index: 2;
+		display: inline:;
+}
+
+.libros-destacados img {
+    height: auto;
+    width: 100%;
+}
+
+.libros-destacados a {
+	display: block;
+	height: 180px;
+}
+
+ /************************************************************
+  											* FOOTER *
+  **********************************************************/
+
+footer {
+		left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+		position: fixed;
+    text-align: center;
+}
+
+#footer-content {
+    padding: 15px;
+    font-size: .8em;
+}
+
+#footer-content > * {
+	margin-right: 5px;
+}
